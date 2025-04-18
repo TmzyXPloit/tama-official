@@ -1,0 +1,179 @@
+/* Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Fonts & Colors */
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  color: #333;
+  background-color: #f9f9f9;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+ul {
+  list-style: none;
+}
+
+/* Navbar */
+nav {
+  display: flex;
+  justify-content: space-between;
+  padding: 20px 40px;
+  background-color: #fff;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}
+
+.logo {
+  font-size: 1.5em;
+  font-weight: bold;
+}
+
+.nav-links {
+  display: flex;
+  gap: 20px;
+}
+
+.nav-links li a:hover {
+  color: #0077ff;
+  transition: 0.3s;
+}
+
+/* Hero */
+.hero {
+  height: 100vh;
+  background: linear-gradient(to right, #00c6ff, #0072ff);
+  color: #fff;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding: 0 20px;
+}
+
+.hero h2 {
+  font-size: 3em;
+  animation: slideUp 1s ease-out;
+}
+
+.hero p {
+  margin: 20px 0;
+  font-size: 1.2em;
+  animation: fadeIn 1.5s ease-out;
+}
+
+.btn {
+  padding: 10px 30px;
+  background-color: #fff;
+  color: #0077ff;
+  border-radius: 25px;
+  transition: 0.3s;
+}
+
+.btn:hover {
+  background-color: #0077ff;
+  color: #fff;
+}
+
+/* Sections */
+.section {
+  padding: 80px 40px;
+  background-color: #fff;
+}
+
+.section:nth-child(even) {
+  background-color: #f0f4f8;
+}
+
+.section h2 {
+  font-size: 2.5em;
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+.section p,
+.section ul {
+  max-width: 600px;
+  margin: 0 auto;
+  text-align: center;
+  font-size: 1.1em;
+  color: #555;
+}
+
+/* Contact Form */
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  max-width: 500px;
+  margin: auto;
+}
+
+input, textarea {
+  padding: 10px;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+}
+
+button {
+  padding: 10px;
+  background-color: #0077ff;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: #005fcc;
+}
+
+/* Footer */
+footer {
+  padding: 30px;
+  text-align: center;
+  background-color: #222;
+  color: white;
+}
+
+/* Animations */
+@keyframes slideUp {
+  from {
+    transform: translateY(50px);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0px);
+    opacity: 1;
+  }
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+.fade-in {
+  opacity: 0;
+  transform: translateY(20px);
+  transition: all 0.6s ease-out;
+}
+
+.fade-in.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
